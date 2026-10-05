@@ -12,7 +12,5 @@ sealed class Routes {
     object HomeScreen : Routes()
 
     @Serializable
-    data class DetailsScreen(val product: Int) : Routes() {
-        val productId: Any
-    }
+    data class DetailsScreen(val productId: Int) : Routes()
 }

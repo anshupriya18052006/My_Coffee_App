@@ -23,11 +23,7 @@ fun NavGraph(){
             HomeScreen(navController)
         }
 
-        composable<Routes.DetailsScreen> { backStackEntry ->
 
-            val args = backStackEntry.toRoute<Routes.DetailsScreen>()
-            DetailsScreen(productId = args.productId)
-        }
 
     }
 }

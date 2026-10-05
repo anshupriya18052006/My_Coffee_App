@@ -35,7 +35,7 @@ fun DetailsScreen(
 
     Scaffold(
 
-        topBar = { DetailsScreenTopAppBar() },
+        topBar = { DetailsScreenTopAppBar(navController = navController) },
         bottomBar = { DetailsScreenBottomBar() }
     ){ innerPadding->
 
