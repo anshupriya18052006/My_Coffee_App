@@ -14,12 +14,12 @@ fun NavGraph(){
 
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Routes.WelcomeScreen){
-        composable<Routes.WelcomeScreen>{
+    NavHost(navController = navController, startDestination = Routes.WelcomeScreen) {
+        composable<Routes.WelcomeScreen> {
             WelcomeScreen(navController)
         }
 
-        composable<Routes.HomeScreen>{
+        composable<Routes.HomeScreen> {
             HomeScreen(navController)
         }
 
@@ -28,7 +28,6 @@ fun NavGraph(){
             val args = backStackEntry.toRoute<Routes.DetailsScreen>()
             DetailsScreen(productId = args.productId)
         }
-        }
-    }
 
+    }
 }
