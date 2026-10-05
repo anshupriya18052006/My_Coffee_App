@@ -41,7 +41,8 @@ fun DetailsScreenTopAppBar(navController: NavController){
             Icon(
                 painter = painterResource(id = R.drawable.regular_outline_arrow_left),
                 contentDescription = "Back Button",
-                modifier = Modifier.padding(start = 12.dp)
+                modifier = Modifier
+                    .padding(start = 12.dp)
                 .clickable(onClick = {navController.navigateUp()})
             )
         }

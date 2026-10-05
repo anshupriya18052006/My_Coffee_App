@@ -2,6 +2,7 @@ package com.example.my_coffee_app.presentation.screens.homescreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,8 +32,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.my_coffee_app.R
 import com.example.my_coffee_app.domain.model.Product
+import com.example.my_coffee_app.presentation.screens.navigation.Routes
 import com.example.my_coffee_app.presentation.screens.theme.IvoryWhite
 import com.example.my_coffee_app.presentation.screens.theme.LightBrown
 import com.example.my_coffee_app.presentation.screens.theme.LightGray
@@ -41,13 +44,15 @@ import com.example.my_coffee_app.presentation.screens.theme.LightGray
 @Composable
 fun ProductCard(
     product: Product,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavController
 ){
 
     Card(
         modifier = modifier
             .fillMaxWidth()
-        .padding(8.dp),
+        .padding(8.dp)
+            .clickable{navController.navigate(Routes.DetailsScreen(product.id))},
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
             containerColor = LightGray
@@ -138,5 +143,10 @@ fun ProductCard(
             }
         }
     }
+}
+
+@Composable
+fun DetailScreen(x0: Int) {
+    TODO("Not yet implemented")
 }
 

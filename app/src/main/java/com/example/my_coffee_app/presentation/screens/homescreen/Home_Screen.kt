@@ -74,7 +74,7 @@ fun HomeScreen(navController: NavController){
                 Product(id=7, name="Flat White", description = "Creamy and milk", price = 3.99, imageRes = R.drawable.coffee_4),
                 )
 
-            ProductsGrid(products = products){
+            ProductsGrid(products = products, navController = navController){
 
                 Text(
                     text = "Location",
