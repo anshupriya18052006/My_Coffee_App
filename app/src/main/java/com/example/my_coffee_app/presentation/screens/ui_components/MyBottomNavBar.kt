@@ -1,4 +1,4 @@
-package com.example.my_coffee_app.screens.ui_components
+package com.example.my_coffee_app.presentation.screens.ui_components
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
@@ -15,7 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.my_coffee_app.R
-import com.example.my_coffee_app.ui.theme.LightBrown
+import com.example.my_coffee_app.presentation.screens.theme.LightBrown
 
 
 @Preview(showBackground = true)

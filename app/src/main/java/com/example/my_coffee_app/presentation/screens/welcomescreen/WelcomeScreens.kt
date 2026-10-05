@@ -1,4 +1,4 @@
-package com.example.my_coffee_app.screens.welcomescreen
+package com.example.my_coffee_app.presentation.screens.welcomescreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,12 +24,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.my_coffee_app.R
-import com.example.my_coffee_app.ui.theme.LightBrown
+import com.example.my_coffee_app.presentation.screens.navigation.Routes
+import com.example.my_coffee_app.presentation.screens.theme.LightBrown
 
-@Preview(showBackground = true, showSystemUi = true)
+
 @Composable
-fun WelcomeScreen(){
+fun WelcomeScreen(navController: NavController){
 
     Box(
         modifier = Modifier.fillMaxSize().background(color= Color.Black)
@@ -64,7 +66,7 @@ fun WelcomeScreen(){
             Spacer(modifier = Modifier.height(50.dp))
 
             Button(
-                onClick = {},
+                onClick = {navController.navigate(Routes.HomeScreen)},
                 modifier = Modifier.fillMaxWidth().height(50.dp),
                 shape = RoundedCornerShape(10.dp),
                 colors = buttonColors(

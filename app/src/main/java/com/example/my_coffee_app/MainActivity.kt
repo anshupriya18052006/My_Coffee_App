@@ -4,16 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.my_coffee_app.screens.homescreen.HomeScreen
-import com.example.my_coffee_app.screens.welcomescreen.WelcomeScreen
-import com.example.my_coffee_app.ui.theme.My_Coffee_AppTheme
+import com.example.my_coffee_app.presentation.screens.detailsscreen.DetailsScreen
+import com.example.my_coffee_app.presentation.screens.homescreen.HomeScreen
+import com.example.my_coffee_app.presentation.screens.navigation.NavGraph
+import com.example.my_coffee_app.presentation.screens.theme.My_Coffee_AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             My_Coffee_AppTheme {
-                HomeScreen()
+                NavGraph()
             }
         }
     }

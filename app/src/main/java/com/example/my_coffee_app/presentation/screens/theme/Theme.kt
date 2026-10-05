@@ -1,6 +1,5 @@
-package com.example.my_coffee_app.ui.theme
+package com.example.my_coffee_app.presentation.screens.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -1,4 +1,4 @@
-package com.example.my_coffee_app.ui.theme
+package com.example.my_coffee_app.presentation.screens.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
