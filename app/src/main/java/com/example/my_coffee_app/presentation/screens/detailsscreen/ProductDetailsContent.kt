@@ -111,7 +111,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
         Spacer(modifier = Modifier.height(24.dp))
 
         Text(
-            text = "Size",
+            text = "Description",
             fontSize=24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black
