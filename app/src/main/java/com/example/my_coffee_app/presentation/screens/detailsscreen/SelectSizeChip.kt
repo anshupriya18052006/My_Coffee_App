@@ -48,7 +48,7 @@ fun SelectSizeChip(sizeText: String, selected: Boolean, onClick: () -> Unit, mod
                 text = sizeText,
                 fontSize = 16.sp,
                 fontWeight= FontWeight.SemiBold,
-                color = if (selected) LightBrown else CharcoalGray
+                color = if (selected) Color.White else CharcoalGray
             )
         }
 
