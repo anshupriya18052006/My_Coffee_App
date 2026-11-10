@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -64,13 +65,17 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             color = Color.Black
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
-        Row(){
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ){
             Text(
                 text="Ice / Hot",
                 fontSize = 16.sp,
-                color = LightGray,
+                color = Color.Gray,
                 fontWeight = FontWeight.Medium
             )
             Icon(
@@ -104,7 +109,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
         Text(
             text=product.description,
             fontSize = 16.sp,
-            color = LightGray,
+            color = Color.Gray,
             fontWeight = FontWeight.Medium
         )
 
