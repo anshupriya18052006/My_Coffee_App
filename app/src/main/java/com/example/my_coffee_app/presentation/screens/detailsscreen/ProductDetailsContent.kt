@@ -56,7 +56,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             contentScale = ContentScale.Crop
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Text(
             text = product.name,
@@ -65,7 +65,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             color = Color.Black
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -90,13 +90,11 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
-        HorizontalDivider(
-           color = Color.LightGray.copy(alpha=0.5f)
-        )
+        HorizontalDivider(color = Color.LightGray.copy(alpha=0.5f))
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Text(
             text = "Description",
@@ -104,7 +102,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             fontWeight = FontWeight.Bold,
             color = Color.Black
         )
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         Text(
             text=product.description,
@@ -113,7 +111,7 @@ fun ProductDetailsContent(product: Product?, innerPadding: PaddingValues){
             fontWeight = FontWeight.Medium
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(60.dp))
 
         Text(
             text = "Size",
