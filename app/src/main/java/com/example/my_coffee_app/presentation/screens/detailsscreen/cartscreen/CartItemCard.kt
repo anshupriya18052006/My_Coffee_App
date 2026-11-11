@@ -33,19 +33,23 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.my_coffee_app.domain.model.Product
 import com.example.my_coffee_app.presentation.screens.theme.LightBrown
+import com.example.my_coffee_app.presentation.screens.theme.LightGray
 
 
-@Preview
 @Composable
-fun CardItemCard(){
+fun CartItemCard(product: Product){
 
     var quantity by remember { mutableStateOf(1) }
 
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface,
+            containerColor = LightGray,
+        ),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 4.dp
         )
 
     ){
@@ -56,7 +60,7 @@ fun CardItemCard(){
 
        ){
 
-           Image(painter = painterResource(id = R.drawable.coffee_3),
+           Image(painter = painterResource(id = product.imageRes),
                contentDescription = "Coffee Image",
                modifier = Modifier.size(70.dp).clip(RoundedCornerShape(10.dp))
 
@@ -65,13 +69,13 @@ fun CardItemCard(){
            Column(
                modifier = Modifier.weight(weight = 1f).padding(start = 12.dp)
            ){
-               Text( text = "Coffee Name",
+               Text( text = product.name,
                    style = MaterialTheme.typography.bodyLarge.copy(
                        fontWeight = FontWeight.SemiBold
                    )
                )
 
-                Text( text = "Coffee Description",
+                Text( text = product.description,
                     style = MaterialTheme.typography.bodySmall.copy(
                         color = Color.DarkGray
                     )
