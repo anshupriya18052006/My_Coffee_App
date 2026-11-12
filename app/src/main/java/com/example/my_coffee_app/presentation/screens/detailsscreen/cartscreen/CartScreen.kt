@@ -32,19 +32,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.my_coffee_app.R
 import com.example.my_coffee_app.domain.model.Product
 import com.example.my_coffee_app.presentation.screens.navigation.Routes
 import com.example.my_coffee_app.presentation.screens.theme.LightBrown
+import com.example.my_coffee_app.presentation.screens.ui_components.MyBottomNavBar
 
-@Preview
+
 @Composable
-fun CartScreen(){
+fun CartScreen(navController: NavController){
     val cartProducts = listOf(
         Product(id=1, name="Espresso", description = "Strong and rich", price = 2.99, imageRes = R.drawable.coffee_2),
         Product(id=2, name="Cappuccino", description = "Creamy and milk", price = 3.99, imageRes = R.drawable.coffee_3),
         Product(id=3, name="Latte", description = "Creamy and milk", price = 3.99, imageRes = R.drawable.coffee_1),
-        )
+    )
 
     var amount by remember{ mutableStateOf(12.50)}
     var deliveryFee by remember{ mutableStateOf(1.0)}
@@ -52,13 +54,14 @@ fun CartScreen(){
     var totalAmount by remember{ mutableStateOf(amount + deliveryFee)}
 
     Scaffold(
-        topBar = { CartScreenTopAppBar() }
+        topBar = { CartScreenTopAppBar() },
+        bottomBar = {MyBottomNavBar(navController, "Cart")}
     ){
         innerPadding ->
 
         LazyColumn(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(start = 16.dp, end = 16.dp)
                 .padding(innerPadding
                 )
         ){

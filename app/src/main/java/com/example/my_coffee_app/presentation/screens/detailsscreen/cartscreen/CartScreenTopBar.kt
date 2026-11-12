@@ -16,32 +16,25 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.my_coffee_app.R
+import com.example.my_coffee_app.presentation.screens.navigation.Routes
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
+
 
 @Composable
 fun CartScreenTopAppBar(){
 
 
     TopAppBar(
-        title = { Text(text = "Order",
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center,
-            fontWeight = FontWeight.Bold
-        )
-                },
-
-        navigationIcon = {
-
-            Icon(
-                painter = painterResource(id = R.drawable.regular_outline_arrow_left),
-                contentDescription = "Back Button",
-                modifier = Modifier
-                    .padding(start = 12.dp)
-                    .clickable(onClick = {})
+        title = {
+            Text(
+                text = "Order",
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold
             )
         }
     )
+
 
 }

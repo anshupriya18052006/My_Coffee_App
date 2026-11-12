@@ -37,7 +37,7 @@ fun HomeScreen(navController: NavController){
     val location  = "Janatha Rd, Palarivattom"
 
     Scaffold(
-        bottomBar = { MyBottomNavBar() }
+        bottomBar = { MyBottomNavBar(navController, "Home") }
     ){ innerPadding->
 
         Box(
